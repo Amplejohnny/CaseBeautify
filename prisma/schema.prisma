@@ -7,13 +7,36 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id    String  @id @default(cuid())
-  email String
-  Order Order[]
+enum OrderStatus {
+  fulfilled
+  shipped
+  awaiting_shipment
+}
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+enum PhoneModel {
+  iphone11ProMax
+  iphone12ProMax
+  iphone13ProMax
+  iphone14ProMax
+  iphone15ProMax
+  iphone16ProMax
+}
+
+enum CaseMaterial {
+  silicone
+  polycarbonate
+}
+
+enum CaseFinish {
+  smooth
+  textured
+}
+
+enum CaseColor {
+  black
+  blue
+  rose
+  amber
 }
 
 model Configuration {
@@ -27,6 +50,15 @@ model Configuration {
   finish          CaseFinish?
   croppedImageUrl String?
   Order           Order[]
+}
+
+model User {
+  id    String  @id @default(cuid())
+  email String
+  Order Order[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model Order {
@@ -70,35 +102,4 @@ model BillingAddress {
   state       String?
   phoneNumber String?
   orders      Order[]
-}
-
-enum OrderStatus {
-  fulfilled
-  shipped
-  awaiting_shipment
-}
-
-enum PhoneModel {
-  iphoneX
-  iphone11
-  iphone12
-  iphone13
-  iphone14
-  iphone15
-}
-
-enum CaseMaterial {
-  silicone
-  polycarbonate
-}
-
-enum CaseFinish {
-  smooth
-  textured
-}
-
-enum CaseColor {
-  black
-  blue
-  rose
 }

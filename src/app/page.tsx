@@ -142,13 +142,13 @@ export default function Home() {
               </div>
               <div className="text-lg leading-8">
                 <p className="">
-                  "The case feels durable and I even got a compliment on the
+                &quot;The case feels durable and I even got a compliment on the
                   design. Had the case for two and a half months now and{" "}
                   <span className="p-0.5 bg-slate-800 text-white">
                     the image is super clear
                   </span>
                   , on the case I had before, the image started fading into
-                  yellow-ish color after a couple weeks. Love it."
+                  yellow-ish color after a couple weeks. Love it.&quot;
                 </p>
               </div>
               <div className="flex gap-4 mt-2">
@@ -178,14 +178,14 @@ export default function Home() {
               </div>
               <div className="text-lg leading-8">
                 <p>
-                  "I usually keep my phone together with my keys in my pocket
+                &quot;I usually keep my phone together with my keys in my pocket
                   and that led to some pretty heavy scratchmarks on all of my
                   last phone cases. This one, besides a barely noticeable
                   scratch on the corner,{" "}
                   <span className="p-0.5 bg-slate-800 text-white">
                     looks brand new after about half a year
                   </span>
-                  . I dig it."
+                  . I dig it.&quot;
                 </p>
               </div>
               <div className="flex gap-4 mt-2">
