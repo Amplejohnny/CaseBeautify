@@ -3,6 +3,8 @@
   "rules": {
     // Additional, per-project rules...
     "@next/next/no-img-element": "off",
-    "@next/next/no-alt-text": "off"
+    "@next/next/no-alt-text": "off",
+    "react/no-unescaped-entities": "off",
+    "react/jsx-ally/alt-text": "off"
   }
 }
