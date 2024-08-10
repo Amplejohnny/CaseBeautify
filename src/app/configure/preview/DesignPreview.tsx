@@ -16,6 +16,10 @@ import { useToast } from "@/components/ui/use-toast";
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import LoginModal from "@/components/LoginModal";
 
+interface CheckoutProps {
+  event: React.MouseEvent<HTMLButtonElement> | React.FormEvent<HTMLFormElement>;
+}
+
 const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
   const router = useRouter();
   const { toast } = useToast();
@@ -57,7 +61,8 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
     },
   });
 
-  const handleCheckout = () => {
+  const handleCheckout = ({ event }: CheckoutProps) => {
+    event.preventDefault();
     if (user) {
       // create payment session
       createPaymentSession({ configId: id });
@@ -161,7 +166,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
 
             <div className="mt-8 flex justify-end pb-12">
               <Button
-                onClick={() => handleCheckout()}
+                onClick={(event) => handleCheckout({ event })}
                 className="px-4 sm:px-6 lg:px-8"
               >
                 Check out <ArrowRight className="h-4 w-4 ml-1.5 inline" />
