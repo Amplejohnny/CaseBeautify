@@ -44,8 +44,8 @@ const OrderReceivedEmail = ({
             />
             <Heading style={global.heading}>Thank you for your order!</Heading>
             <Text style={global.text}>
-              We're preparing everything for delivery and will notify you once
-              your package has been shipped. Delivery usually takes 2 days.
+              We'll notify you once your package is shipped. Delivery normally
+              takes 2-5 working days.
             </Text>
             <Text style={{ ...global.text, marginTop: 24 }}>
               If you have any questions regarding your order, please feel free
@@ -85,8 +85,7 @@ const OrderReceivedEmail = ({
                   paddingBottom: 30,
                 }}
               >
-                Please contact us if you have any questions. (If you reply to
-                this email, we won't be able to see it.)
+                Please contact us if you have any questions.
               </Text>
             </Row>
             <Row>
