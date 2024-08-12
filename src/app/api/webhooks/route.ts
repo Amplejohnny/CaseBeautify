@@ -1,3 +1,4 @@
+import Cors from "cors";
 import { db } from "@/db";
 import { stripe } from "@/lib/stripe";
 import { headers } from "next/headers";
@@ -6,9 +7,33 @@ import Stripe from "stripe";
 import { Resend } from "resend";
 import OrderReceivedEmail from "@/components/emails/OrderReceivedEmail";
 
+// Initialize the Resend client
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Initialize CORS middleware
+const cors = Cors({
+  methods: ["GET", "HEAD", "POST"],
+  origin: "https://casebeautify.vercel.app", // Adjust this to your needs
+  optionsSuccessStatus: 200,
+});
+
+// Helper method to wait for a middleware to execute before continuing
+function runMiddleware(req: Request, res: Response, fn: Function) {
+  return new Promise((resolve, reject) => {
+    fn(req, res, (result: any) => {
+      if (result instanceof Error) {
+        return reject(result);
+      }
+      return resolve(result);
+    });
+  });
+}
+
 export async function POST(req: Request) {
+  // Run the CORS middleware
+  const response = new NextResponse();
+  await runMiddleware(req, response, cors);
+
   try {
     const body = await req.text();
     const signature = headers().get("stripe-signature");
