@@ -13,7 +13,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 // Initialize CORS middleware
 const cors = Cors({
   methods: ["GET", "HEAD", "POST"],
-  origin: "https://casebeautify.vercel.app", // Adjust this to your needs
+  origin: "*", // Adjust this to your needs
   optionsSuccessStatus: 200,
 });
 
