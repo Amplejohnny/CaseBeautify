@@ -42,6 +42,6 @@ export function constructMetadata({
       creator: "@amplejohnny",
     },
     icons,
-    metadataBase: new URL("https://casebeautify.vercel.app/"),
+    metadataBase: new URL("https://casebeautify.vercel.app"),
   };
 }

@@ -167,6 +167,7 @@ const DesignConfigurator = ({ configId, imageUrl, imageDimensions }: DesignConfi
               alt="phone image"
               src="/phone-template.png"
               className="pointer-events-none z-50 select-none"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </AspectRatio>
           <div className="absolute z-40 inset-0 left-[3px] top-px right-[3px] bottom-px rounded-[32px] shadow-[0_0_0_99999px_rgba(229,231,235,0.6)]" />
@@ -207,7 +208,7 @@ const DesignConfigurator = ({ configId, imageUrl, imageDimensions }: DesignConfi
           }}
         >
           <div className="relative w-full h-full">
-            <NextImage src={imageUrl} fill alt="your image" className="pointer-events-none" />
+            <NextImage src={imageUrl} fill alt="your image" className="pointer-events-none" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           </div>
         </Rnd>
       </div>

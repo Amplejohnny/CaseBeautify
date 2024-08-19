@@ -27,6 +27,7 @@ const LoginModal = ({
               alt="snake image"
               className="object-contain"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
           <DialogTitle className="text-3xl text-center font-bold tracking-tight text-gray-900">

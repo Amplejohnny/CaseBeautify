@@ -72,7 +72,7 @@ export async function POST(req: Request) {
       });
 
       await resend.emails.send({
-        from: "CaseBeautify <uzunuel@gmail.com>",
+        from: "CaseBeautify <order@amplejohnny.com>",
         to: [event.data.object.customer_details.email],
         subject: "Thanks for your order!",
         react: OrderReceivedEmail({
@@ -91,7 +91,7 @@ export async function POST(req: Request) {
       });
     }
 
-    return NextResponse.json({ result: event, ok: true });
+    return NextResponse.json({ result: event, ok: true }, { status: 200 });
   } catch (err) {
     console.error(err);
 

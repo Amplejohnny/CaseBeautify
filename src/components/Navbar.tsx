@@ -11,7 +11,7 @@ const Navbar = async () => {
   const isAdmin = user?.email === process.env.ADMIN_EMAIL;
 
   return (
-    <nav className="sticky z-[100] h-14 inset-x-0 top-0 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
+    <nav className="sticky z-[100] h-14 inset-x-0 top-0 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all pl-4 lg:pl-0">
       <MaxWidthWrapper>
         <div className="flex h-14 items-center justify-between border-b border-zinc-200">
           <Link
@@ -25,7 +25,7 @@ const Navbar = async () => {
             {user ? (
               <>
                 <Link
-                  href="api/auth/logout"
+                  href="/api/auth/logout"
                   className={buttonVariants({
                     size: "lg",
                     variant: "ghost",
@@ -58,7 +58,7 @@ const Navbar = async () => {
             ) : (
               <>
                 <Link
-                  href="api/auth/register"
+                  href="/api/auth/register"
                   className={buttonVariants({
                     size: "lg",
                     variant: "ghost",
@@ -68,7 +68,7 @@ const Navbar = async () => {
                 </Link>
 
                 <Link
-                  href="api/auth/login"
+                  href="/api/auth/login"
                   className={buttonVariants({
                     size: "lg",
                     variant: "ghost",

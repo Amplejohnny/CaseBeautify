@@ -11,11 +11,21 @@ const ThankYou = () => {
   const searchParams = useSearchParams();
   const orderId = searchParams.get("orderId") || "";
 
+  const shouldRetry = (failureCount: number, error: any) => {
+    if (failureCount >= 3) return false;
+
+    if (error instanceof Error) {
+      return true;
+    }
+
+    return false;
+  };
+
   const { data } = useQuery({
     queryKey: ["get-payment-status"],
     queryFn: async () => await getPaymentStatus({ orderId }),
-    retry: true,
-    retryDelay: 500,
+    retry: shouldRetry,
+    retryDelay: 5000,
   });
 
   if (data === undefined) {
