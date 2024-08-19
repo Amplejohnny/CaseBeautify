@@ -79,7 +79,7 @@ const ThankYou = () => {
               You made a great choice!
             </h4>
             <p className="mt-2 text-sm text-zinc-600">
-              CaseBeautify believes that a phone case should not only look
+              At CaseBeautify, we believe that a phone case should not only look
               excellent, but also last for years. We provide a 5-year print
               guarantee: if your case is not of great quality, we will replace
               it for free.
