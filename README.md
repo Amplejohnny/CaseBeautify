@@ -19,7 +19,7 @@ CaseBeautify is a **Next.js** application designed for users to **customize, pre
 
 ### Core Technologies:
 
-- **Next.js** (React Framework)
+- **Next.js** (Page Router)
 - **TypeScript**
 - **Tailwind CSS** (UI Styling)
 - **Prisma** (ORM for Database Management)
