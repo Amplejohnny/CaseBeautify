@@ -67,10 +67,18 @@ npm install
 
 ```env
 DATABASE_URL=your_mongodb_connection_string
-NEXT_PUBLIC_STRIPE_KEY=your_stripe_public_key
-STRIPE_SECRET_KEY=your_stripe_secret_key
-UPLOADTHING_SECRET=your_uploadthing_secret_key
-KIND_AUTH_SECRET=your_kinde_auth_secret
+KINDE_CLIENT_ID=your_kinde_id
+KINDE_CLIENT_SECRET=your_kinde_client
+UPLOADTHING_TOKEN=your_uploadthing_token
+KINDE_ISSUER_URL=your_kinde_issuer_url
+KINDE_SITE_URL=your_kinde_site
+KINDE_POST_LOGOUT_REDIRECT_URL=your_kinde_post_logout_redirect_url
+KINDE_POST_LOGIN_REDIRECT_URL=your_kinde_post_login_redirect_url
+NEXT_PUBLIC_SERVER_URL=your_next_public_server
+STRIPE_SECRET_KEY=your_stripe_secret
+STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
+ADMIN_EMAIL=your_resend_admin_email
+RESEND_API_KEY=your_resend_api
 ```
 
 ### 4. Run Database Migrations:
